@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>task-9</title>
+</head>
+<body>
+    <h1>Користувач загадує число. Комп’ютер задає питання поки не вгадає число користувача (використати confirm).</h1>
+
+    <script>
+        // 1. Вводимо дані
+        let userNumber = parseInt(prompt('Загадайте число від 1 до 10.'));
+
+        // 2. Знаходимо результат
+        let guessed = false;
+        let previousGuesses = [];
+
+        while (!guessed) {
+        let guess = Math.floor(Math.random() * 10) + 1;
+
+        if (previousGuesses.includes(guess)) {
+            continue; // Пропускаємо повторне вгадування числа
+        }
+
+        guessed = confirm(`Чи загадане число ${guess}?`);
+        previousGuesses.push(guess);
+        }
+
+        document.write(`<h2>Молодець вгадав! <br> Я загадував - ${userNumber} </h2>`);
+    </script>
+
+
+    <!-- <script>
+        // 1. Вводимо дані
+        let userNumber = parseInt(prompt('Загадайте число від 1 до 10.'));
+
+        // 2. Знаходимо результат
+        let guessed = false;
+        while (!guessed) {
+            let guess = Math.floor(Math.random() * 10) + 1;
+            guessed = confirm(`Чи загадане число ${guess}?`);
+        }
+        document.write(`<h2>Молодець вгадав! <br> Я загадував - ${userNumber} </h2>`);
+    </script> -->
+
+</body>
+</html>

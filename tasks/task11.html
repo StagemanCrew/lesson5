@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-11</title>
+</head>
+<body>
+    <h1>Знайти суму 5 непарних чисел, що знаходяться між заданими користувачем числами.</h1>
+
+    <script>
+        let userRangeStart = parseInt(prompt('Вкажіть перше число діапазону від 1 до 50.'));
+        let userRangeFinish = parseInt(prompt('Вкажіть друге число діапазону від 1 до 50.'));
+        let odd = 0;
+        let oddTotal = 0;
+        //let oddCount = 0;
+        //let oddTotalRandom = 0;
+
+        for (let i = userRangeStart; i <= userRangeFinish; i++) {
+            if (i % 2 === 1) {
+                odd ++;
+                oddTotal += i;
+            }
+            if (odd === 5){
+                break;
+            }
+        }
+
+        //while (oddCount < 5) {
+        //let randomNumber = Math.floor(Math.random() * (userRangeFinish - userRangeStart + 1)) + userRangeStart;
+        //    if (randomNumber % 2 === 1) {
+        //        oddCount++;
+        //        oddTotalRandom += randomNumber;
+        //    }
+        //}
+        //document.write(`<h2>
+        //    У діапазоні чісел від: ${userRangeStart} до ${userRangeFinish} <br>
+        //    Непарних чисел: ${odd} <br>
+        //    Сума рандомних непарних чисел: ${oddTotalRandom}
+        //</h2>`)
+
+        document.write(`<h2>
+            У діапазоні чісел від: ${userRangeStart} до ${userRangeFinish} <br>
+            Непарних чисел: ${odd} <br>
+            Сума перших 5 непарних чисел: ${oddTotal} <br>
+        </h2>`)
+
+    </script>
+</body>
+</html>

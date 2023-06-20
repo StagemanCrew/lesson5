@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-7</title>
+</head>
+<body>
+    <h1>Вивести на екран N абзаців (N вводиться користувачем).</h1>
+
+    <script>
+        
+        let userNumber = parseInt(prompt('Введіть кількість абзаців'));
+
+        for (let i = 1; i <= userNumber; i++) {
+        document.write(`<h2>Заголовок ${i}</h2>`);
+            for (let paragraph = 1; paragraph <= i; paragraph++) {
+                document.write(`<p>Розділ ${i}, Параграф ${paragraph}</p>`);
+            }
+        }
+
+    </script>
+</body>
+</html>

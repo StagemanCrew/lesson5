@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>task-8</title>
+</head>
+<body>
+    <h1>Користувач загадує число. За 3 спроби комп’ютер намагається вгадати число користувача (використати confirm).</h1>
+
+    <script>
+        // 1. Вводимо дані
+        let userNumber = parseInt(prompt('Загадайте число від 1 до 10.'));
+    
+        // 2. Знаходимо результат
+        let firstAttempt = Math.floor(Math.random() * 10) + 1;
+        if (firstAttempt === userNumber) {
+            document.write(`<h2>Вітаю, вгадав число з першої спроби! <br> Я загадав ${userNumber} </h2>`);
+        } else {
+            if (confirm('Дозвольте ще раз!')) {
+                let secondAttempt = Math.floor(Math.random() * 10) + 1;
+                if (secondAttempt === userNumber) {
+                    document.write(`<h2>Вітаю, вгадав число з другої спроби! <br> Я загадав ${userNumber} </h2>`);
+                } else {
+                    if (confirm('Дозвольте останній раз!')) {
+                        let lastAttempt = Math.floor(Math.random() * 10) + 1;
+                        if (lastAttempt === userNumber) {
+                            document.write(`<h2>Вітаю, вгадав число з третьої спроби! <br> Я загадав ${userNumber} </h2>`);
+                        } else {
+                            document.write(`<h2>Не вгадав. Loser! <br> Я загадав ${userNumber} </h2>`);
+                        }
+                    } else {
+                        document.write(`<h2>Не вгадав. Loser! <br> Я загадав ${userNumber} </h2>`);
+                    }
+                }
+            } else {
+                document.write(`<h2>Не вгадав. Loser! <br> Я загадав ${userNumber} </h2>`);
+            }
+        }
+    </script>
+
+</body>
+</html>

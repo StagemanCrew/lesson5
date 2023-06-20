@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-2</title>
+</head>
+<body>
+    <h1>Створити 10 елементів для введення цін продуктів.</h1>
+
+    <script>
+        for (let i = 1; i <= 10; i++) {
+            document.write(`Product ${i} <input style="margin-bottom: 5px;"> <br>`);
+        }
+    </script>
+
+    <!--<form id="pricesForm">
+        <ul id="pricesList"></ul>
+    </form>
+        // Отримуємо елементи форми та списку
+        const form = document.getElementById('pricesForm');
+        const list = document.getElementById('pricesList');
+
+        // Цикл для створення 10 елементів вводу
+        for (let i = 1; i <= 10; i++) {
+            // Створюємо елементи
+            const listItem = document.createElement('li');
+            const label = document.createElement('label');
+            const input = document.createElement('input');
+
+            // Встановлюємо атрибути для елементів
+            label.setAttribute('for', `price${i}`);
+            label.textContent = `Ціна продукту ${i}:`;
+            input.setAttribute('type', 'number');
+            input.setAttribute('id', `price${i}`);
+            input.setAttribute('name', `price${i}`);
+
+            // Додаємо елементи до DOM
+            listItem.appendChild(label);
+            listItem.appendChild(input);
+            list.appendChild(listItem);
+        }-->
+
+
+</body>
+</html>

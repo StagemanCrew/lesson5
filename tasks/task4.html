@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-4</title>
+</head>
+<body>
+    <h1>Вивести таблицю з 3 рядків і 7 стовпців.</h1>
+
+    <script>
+        
+        document.write('<table border="2px">');
+
+        for (let row = 1; row <= 3; row++) {
+            document.write('<tr>');
+        
+            for (let column = 1; column <= 7; column++) {
+                document.write(`<td> ${column} </td>`);
+            }
+            document.write('</tr>');
+        }
+
+    </script>
+</body>
+</html>

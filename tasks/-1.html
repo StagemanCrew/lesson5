@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>-1</title>
+</head>
+<body>
+    <h1>Вивести на екран номери місяців весни і літа (від 3 до 8)</h1>
+
+    <script>
+        //1. Вводимо даннi
+        //let spring;
+        //let summer;
+        //let season;
+        //let month = '';
+        for (let months = 3; months <= 8; months++) {
+            document.write(`${months}`);
+
+            if (months >= 3 && months <= 5) {
+                season = "Весна";
+            } else if (months >= 6 && months <= 8) {
+                season = "Літо";
+            }
+            document.write(` мiсяць - ${season} <br>`);
+        }
+        //2. Знаходимо результат
+
+        //3. Виводимо результат
+
+    </script>
+</body>
+</html>

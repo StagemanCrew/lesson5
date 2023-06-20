@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-6</title>
+</head>
+<body>
+    <h1></h1>
+
+    <script>
+        document.write('<div style="display: flex; gap: 20px;">');
+            for (let table = 1; table <= 3; table++) {
+                    document.write('<table border="1px"> <br>');
+                
+                    for (let row = 1; row <= 3; row++) {
+                        document.write('<tr>');
+                    
+                        for (let column = 1; column <= 3; column++) {
+                            const number = (table - 1) * 9 + (row - 1) * 3 + column;
+                            document.write(`<td>${number}</td>`);
+                        }
+                        document.write('</tr>');
+                    }
+                    document.write('</table>');
+                }
+        document.write('</div>');
+    </script>
+</body>
+</html>
