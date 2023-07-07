@@ -10,9 +10,25 @@
 
     <script>
         // 1. Вводимо дані
-    
+        const rowsNum = parseInt(prompt('Кількість рядків.')) // N
+        const columnNum = parseInt(prompt('Кількість стовпців.'))// M
+        let bulletNum = parseInt(prompt('Кількість снарядів.'))// K
+        // Випадкове рзтошування корабліка
+        const shipRowPosition = 1 + Math.floor(Math.random() * rowsNum)
+        const shipColumnPosition = 1 + Math.floor(Math.random() * columnNum)
+
         // 2. Знаходимо результат
-    
+        let userRow, userColumn
+        do {
+            userRow = parseInt(prompt('Виберіть рядок.'))
+            userColumn = parseInt(prompt('Виберіть стовпець.'))
+            bulletNum --
+        } while (!(userRow === shipRowPosition && userColumn === shipColumnPosition) && bulletNum > 0);
+        //break
+        if (userRow === shipRowPosition && userColumn === shipColumnPosition)
+            document.write(`<h2>Перемога</h2>`)
+        else
+            document.write(`<h2>Програш!</h2>`)
         // 3. Виводимо результат
 
     </script>

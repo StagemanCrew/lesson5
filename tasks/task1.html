@@ -9,11 +9,12 @@
     <h1>Вивести з використанням циклів маркований список з випадковими числами (1-100). Кількість випадкових чисел вводиться користувачем.</h1>
 
     <script>
-        let randomNumbers = Math.floor(Math.random() * 100) + 1;
+
+        //let randomNumbers = Math.floor(Math.random() * 100) + 1;
         let userNumber = parseInt(prompt('Введiть число вiд 1 до 100.'));
         for (let i = 1; i <= userNumber; i++) {
             let randomNumbers = Math.floor(Math.random() * 100) + 1;
-            document.write(`<h3> <li> ${randomNumbers} </li> </h3>`);
+            document.write(`<li> ${randomNumbers} </li>`);
         }
 
     </script>

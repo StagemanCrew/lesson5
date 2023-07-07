@@ -9,12 +9,25 @@
     <h1>Користувач поступово вводить прибуток магазину за кожен день протягом N тижнів. Знайти загальну величину прибутку та вивести величину прибутку протягом кожного окремого тижня.</h1>
 
     <script>
-        //1. Вводимо даннi
-
-        //2. Знаходимо результат
-
-        //3. Виводимо результат
-
+        // 1. Вводимо дані
+        let weekCount = parseFloat(prompt('Введіть кількість тижнів.'));
+        let totalDaysSum = 0;
+    
+        // 2. Знаходимо результат
+        for (let i = 0; i < weekCount; i++) {
+            let weeklyProfit = 0;
+            for (let j = 0; j < 7; j++) {
+                //const profit = parseFloat(prompt(`Введіть прибуток для дня ${j + 1} тижня ${i + 1}.`));
+                const profit = Math.floor(Math.random() * 50) + 1;
+                weeklyProfit += profit;
+            }
+            totalDaysSum += weeklyProfit;
+            document.write(`<h2>Прибуток тижня ${i + 1}: ${weeklyProfit}</h2>`);
+        }
+    
+        // 3. Виводимо результат загального прибутку
+        document.write(`<h2>Загальний прибуток: ${totalDaysSum}</h2>`);
     </script>
+    
 </body>
 </html>

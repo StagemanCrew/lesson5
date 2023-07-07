@@ -12,17 +12,15 @@
         //1. Вводимо даннi
         //let spring;
         //let summer;
-        //let season;
         //let month = '';
+        let season;
         for (let months = 3; months <= 8; months++) {
-            document.write(`${months}`);
-
-            if (months >= 3 && months <= 5) {
+            if (months <= 5) {
                 season = "Весна";
-            } else if (months >= 6 && months <= 8) {
+            } else {
                 season = "Літо";
             }
-            document.write(` мiсяць - ${season} <br>`);
+            document.write(`<h3> ${months} мiсяць - ${season} </h3><br>`);
         }
         //2. Знаходимо результат
 
